@@ -27,10 +27,8 @@ const answerElement_nhtsa_2 = document.getElementById('nhtsa-2')
 
 request.get("https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/chevrolet?format=json")
   .then(function (response) {
-
     const apiModelChevrole = response.body
     // console.log(apiModelChevrole)
-
     answerElement_nhtsa_2.innerHTML = response.body.Count
   })
 
@@ -49,9 +47,7 @@ request.get("https://vpic.nhtsa.dot.gov/api/vehicles/GetVehicleTypesForMake/niss
     var carType = [];
     apiModelNissan.forEach(function (model) {
       carType.push(model.VehicleTypeName)
-
     });
-
     answerElement_nhtsa_3.innerHTML = carType
   })
 
@@ -70,8 +66,6 @@ request.get("https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformakeyear/make/t
     var carModel = [];
     apiModelNissan.forEach(function (model) {
       carModel.push(model.Model_Name)
-
     });
-
     answerElement_nhtsa_4.innerHTML = carModel
   })
